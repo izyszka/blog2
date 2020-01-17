@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :destroy]
+  before_action :post_find, only: [:show, :edit, :destroy]
   before_action :post_params, only: [:create, :update]
 
   def index
@@ -32,12 +32,12 @@ class PostsController < ApplicationController
     end
   end
 
-  private
-
   def destroy
     @post.destroy
     redirect_to posts_path
   end
+
+  private
 
   def post_params
     @post = Post.new(params[:post].permit(:title, :body))
