@@ -20,4 +20,17 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
   end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.new(params[:post].permit(:title, :body))
+    if @post.save
+      redirect_to posts_path
+    else
+      render 'edit'
+    end
+  end
 end
