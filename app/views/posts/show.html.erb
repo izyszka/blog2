@@ -1,0 +1,12 @@
+<h1><%= @post.title %></h1>
+<p>
+  <span><%= @post.created_at.strftime("%B %d, %Y") %></span>
+  <span><%= link_to('Edit', edit_post_path(@post))%></span>
+  <span><%= link_to('Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'})%></span>
+</p>
+<p><%= @post.body %></p>
+
+<%= render 'comments/form' %>
+
+<h3><%= pluralize(@post.comments.count, "comment")%></h3>
+<%= render @post.comments %>

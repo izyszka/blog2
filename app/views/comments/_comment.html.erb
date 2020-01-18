@@ -1,0 +1,7 @@
+<% if !comment.id.nil? %>
+  <hr>
+  <h4><%= comment.name %></h4>
+  <span><%= link_to('Delete', [comment.post, comment], method: :delete, data: {confirm: 'Are you sure?'})%></span>
+  <p>created <%= time_ago_in_words(comment.created_at) %> ago</p>
+  <p><%= comment.body %></p>
+<% end %>

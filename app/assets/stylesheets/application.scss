@@ -1,0 +1,139 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ * {
+   margin: auto;
+   padding: auto;
+   text-decoration:none;
+ }
+ a {
+   color: inherit;
+ }
+ button {
+   border: medium none;
+   list-style: none outside none;
+ }
+#sidebar{
+  color: #484848;
+   width: 189px;
+   position: fixed;
+   left: 0;
+   top: 0;
+   min-height: 100%;
+   padding: 3.2em 0 0 0;
+   border-right: 1px solid #d6dce0;
+   background: #f5f7f9;
+   font-family: 'Inconsolata', monospace;
+   #logo{
+     margin-right:2.2em;
+     padding-top:3px;
+     width:95px;
+     height:75px;
+     text-align: center;
+     vertical-align: middle;
+     border-radius: 5px;
+     background:white;
+     box-shadow: 4px 4px 10px 0.2px;
+   }
+   ul {
+     margin-top:2em;
+     list-style: none;
+     text-align: right;
+     padding-right: 2em;
+     li {
+       color: #606060;
+       padding: .2em;
+       &:hover{
+         color:black
+       }
+       &:active{
+         color:black;
+       }
+     }
+     .category {
+       font-weight: 700;
+       font-size: 1em;
+       text-transform: uppercase;
+       color: #800000;
+       &:hover {
+         color: #800000;
+       }
+     }
+   }
+   .sign_in {
+     position: absolute;
+     bottom: 5em;
+     right: 3em;
+     font-size: .8em;
+     &:hover{
+       color:black;
+       cursor:pointer;
+     }
+     &:active {
+       color:#606060;
+     }
+   }
+ }
+ #main_content {
+   margin-left: 190px;
+   #header {
+     color: #606060;
+     padding: .7em;
+     position:fixed;
+     top:0;
+     right:0;
+     left:190px;
+     background: #f5f7f9;
+     #title {
+      position:relative;
+      top: 3px;
+      display: inline;
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 1.3em;
+      margin-left: 1em;
+     }
+     .buttons {
+       display: inline;
+       float: right;
+       margin-right: 1em;
+       .button {
+         margin-left: .5em;
+         border-radius: 7px;
+         background: #f5f7f9;
+         font-family: 'Inconsolata', monospace;
+         font-size: 0.8em;
+         padding: .5em;
+         border: 1px solid #696969;
+         color: #696969;
+         &:hover {
+           border: 1px solid black;
+           color: black;
+           cursor:pointer;
+         }
+         &:active{
+           border: 1px solid #696969;
+           color: #696969;
+         }
+       }
+     }
+   }
+   #page_wrapper{
+     padding-top: 3em;
+     .scroll_overflow {
+       padding: 2em;
+       overflow: scroll;
+     }
+  }
+}

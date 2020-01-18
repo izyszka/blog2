@@ -1,0 +1,8 @@
+<h4>New Comment</h4>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name %></p>
+  <p><%= f.label :body %></p>
+  <p><%= f.text_area :body %></p>
+  <p><%= f.submit %></p>
+<% end %>
