@@ -109,14 +109,15 @@
        float: right;
        margin-right: 1em;
        .button {
+         outline:none;
          margin-left: .5em;
          border-radius: 7px;
          background: #f5f7f9;
          font-family: 'Inconsolata', monospace;
          font-size: 0.8em;
          padding: .5em;
-         border: 1px solid #696969;
-         color: #696969;
+         border: 1px solid #707070;
+         color: #707070;
          &:hover {
            border: 1px solid black;
            color: black;
@@ -130,10 +131,154 @@
      }
    }
    #page_wrapper{
-     padding-top: 3em;
+     padding-top: 1em;
      .scroll_overflow {
        padding: 2em;
        overflow: scroll;
      }
+     #post_content{
+       font-family: 'Lato', sans-serif, light;
+       font-weight: light;
+       color: #141414;
+       max-width:900px;
+       margin-left:0;
+       padding: 1em;
+       padding-top: 2em;
+       #post_body {
+        border-bottom:1px solid #d6dce0;
+        padding-bottom:1em;
+        margin-bottom: 1em;
+       }
+       .form {
+         color: #707070;
+       }
+       .title {
+         font-weight: 300;
+         text-decoration: none;
+         color: #2a2f35;
+         font-size: 2em;
+         margin-bottom: 0;
+       }
+       .body {
+         font-weight: 300;
+         padding-top: 1em;
+         overflow-wrap: break-word;
+         font-size: 1.1em;
+         line-height:1.75;
+       }
+       .date_and_author {
+         font-weight: 300;
+         margin: .5em 0 2em 0;
+         font-size: .9em;
+         #edit {
+           margin-left: 1em;
+           border-left: 1px solid black;
+           padding-left: .5em;
+         }
+         #delete {
+           margin-left: .5em;
+           border-left: 1px solid black;
+           padding-left: .5em;
+         }
+       }
+     }
+  }
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    color: #141414;
+    width: 90%;
+    border: 1px solid #d6dce0;
+    border-radius: .35em;
+    margin-top: 10px;
+    padding: .5em 1em;
+    line-height: 1.75;
+  }
+  input[type="text"] {
+    color: #141414;
+    font-size:1em;
+    height: 35px;
+    &:focus {
+      outline:none;
+    }
+  }
+  textarea {
+    color: #141414;
+    font-size:1em;
+    height: 180px;
+    &:focus {
+      outline: none;
+    }
+  }
+  input[type="submit"] {
+    padding: 7px;
+    border-radius: 7px;
+    font-size: .8em;
+    color: #707070;
+    &:hover {
+      cursor:pointer;
+    }
+    &:active {
+      border: 1px solid black;
+      color:black;
+      outline: none;
+    }
+  }
+  .label{
+    margin-top: 1em;
+  }
+  .submit {
+    margin-top: .5em;
+  }
+  #comments {
+    .comments_title {
+      margin-bottom: .3em;
+      margin-top: 1em;
+    }
+    .overflow{
+      overflow:auto;
+    }
+    font-family: inherit;
+    font-weight:300;
+    hr {
+      color: #d6dce0;
+    }
+    .comment_content {
+      float: left;
+      .comment_name {
+        margin: 1em 0 0 0;
+        font-size: .8em;
+        text-transform: uppercase;
+      }
+      .comment_body {
+        font-size: 1em;
+        margin: 1.2em 0 1em 0;
+      }
+      .comment_time {
+        margin-top: 0.2em;
+        font-size: .8em;
+      }
+    }
+    .button {
+      margin-top: 1em;
+      float: right;
+      font-size:.8em;
+    }
+    #comment_form {
+      div {
+        margin-top:1em;
+        margin-bottom:1em;
+      }
+      margin-bottom:1em;
+      input[type="text"]{
+        width:40%;
+        height:1em;
+      }
+      textarea{
+        width: 40%;
+        height:50px;
+      }
+      .label {
+        font-size: 1em;
+      }
+    }
   }
 }

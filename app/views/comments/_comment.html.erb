@@ -1,7 +1,11 @@
 <% if !comment.id.nil? %>
   <hr>
-  <h4><%= comment.name %></h4>
-  <span><%= link_to('Delete', [comment.post, comment], method: :delete, data: {confirm: 'Are you sure?'})%></span>
-  <p>created <%= time_ago_in_words(comment.created_at) %> ago</p>
-  <p><%= comment.body %></p>
+  <div class="overflow">
+  <div class="comment_content">
+    <h4 class="comment_name"><%= comment.name %></h4>
+    <p class="comment_time">created <%= time_ago_in_words(comment.created_at) %> ago</p>
+    <p class="comment_body"><%= comment.body %></p>
+  </div>
+  <div class="button"><%= link_to('Delete', [comment.post, comment], method: :delete, data: {confirm: 'Are you sure?'})%></div>
+  </div>
 <% end %>

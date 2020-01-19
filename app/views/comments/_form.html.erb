@@ -1,8 +1,15 @@
 <h4>New Comment</h4>
-<%= form_for([@post, @post.comments.build]) do |f| %>
-  <p><%= f.label :name %></p>
-  <p><%= f.text_field :name %></p>
-  <p><%= f.label :body %></p>
-  <p><%= f.text_area :body %></p>
-  <p><%= f.submit %></p>
-<% end %>
+
+<div id="comment_form">
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+    <div>
+      <p class="label"><%= f.label :name %></p>
+      <p class="comment_input"><%= f.text_field :name %></p>
+    </div>
+    <div>
+      <p class="label"><%= f.label :body %></p>
+      <p class="comment_textarea"><%= f.text_area :body %></p>
+    </div>
+    <p><%= f.submit %></p>
+  <% end %>
+</div>
