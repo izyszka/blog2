@@ -1,5 +1,9 @@
-<% @posts.each do |post| %>
-  <h1><%= link_to(post.title, post) %></h1>
-  <p><%= time_ago_in_words(post.created_at) %></p>
-  <p><%= post.body %></p>
-<% end %>
+<div id="post_content">
+  <% @posts.each do |post| %>
+    <div id="post_body">
+      <h1 class="title"><%= link_to(post.title, post) %></h1>
+      <p class="date_and_author">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+      <p class="body"><%= post.body %></p>
+    </div>
+  <% end %>
+</div>

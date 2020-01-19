@@ -1,16 +1,18 @@
-<% if @post.errors.any? %>
-  <p><%= pluralize(@post.errors.count, "error")%> prevented this post from saving:</p>
-  <ul>
-  <% @post.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
+<div class="form">
+  <% if @post.errors.any? %>
+    <p><%= pluralize(@post.errors.count, "error")%> prevented this post from saving:</p>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
   <% end %>
-  </ul>
-<% end %>
 
-<%= form_for @post do |f| %>
-  <p><%= f.label :title %></p>
-  <p><%= f.text_field :title %></p>
-  <p><%= f.label :body %></p>
-  <p><%= f.text_area :body %></p>
-  <p><%= f.submit %></p>
-<% end %>
+  <%= form_for @post do |f| %>
+    <p class="label"><%= f.label :title %></p>
+    <p><%= f.text_field :title %></p>
+    <p class="label"><%= f.label :body %></p>
+    <p><%= f.text_area :body %></p>
+    <p class="submit"><%= f.submit %></p>
+  <% end %>
+</div>
