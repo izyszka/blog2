@@ -89,6 +89,7 @@
  #main_content {
    margin-left: 190px;
    #header {
+     height:2em;
      color: #606060;
      padding: .7em;
      position:fixed;
@@ -99,7 +100,7 @@
      #title {
       padding-left:1em;
       position:relative;
-      top: 3px;
+      top: 5px;
       display: inline;
       font-family: 'Julius Sans One', sans-serif;
       font-size: 1.3em;
@@ -132,10 +133,46 @@
      }
    }
    #page_wrapper{
+     .msg{
+       font-family: 'Lato', sans-serif, light;
+       position:relative;
+       top:2em;
+       padding-left:1em;
+       padding-bottom:1em;
+       .alert {
+         color:red;
+       }
+       .notice {
+         color: green;
+       }
+     }
      padding-top: 1em;
      .scroll_overflow {
        padding: 2em;
        overflow: scroll;
+     }
+     .user_form{
+       font-family: 'Lato', sans-serif, light;
+       font-weight: 300;
+       color: #141414;
+       max-width:900px;
+       margin-left:0;
+       padding: 1em;
+       .title {
+         font-weight:300;
+       }
+       .field {
+         margin-top: 1em;
+         input {
+           outline:none;
+         }
+       }
+       .remember {
+         margin-top: .5em;
+       }
+       .actions {
+         margin-top: 1em;
+       }
      }
      #post_content{
        font-family: 'Lato', sans-serif, light;
